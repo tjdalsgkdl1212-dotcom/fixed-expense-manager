@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>냉장고 관리 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>냉장고 관리</h1>
+    
+    <div class="input-section">
+        <h3>식재료 추가</h3>
+        <input type="text" id="food-name" placeholder="식재료 이름 (예: 우유)">
+        <input type="date" id="expiry-date">
+        <button id="add-btn">추가하기</button>
+    </div>
+    
+    <div class="stats-section">
+        <h3>📊 현황</h3>
+        <div id="stats-content">
+            <!-- 통계 정보가 여기에 표시됩니다 -->
+        </div>
+    </div>
+    
+    <div class="food-list">
+        <h3>내 식재료</h3>
+        <div id="food-items">
+            <!-- 여기에 식재료 목록이 나타납니다 -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
