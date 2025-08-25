@@ -1,1 +1,1 @@
-# fridge-app
+fixed-expense-manager
