@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>냉장고 관리 앱</title>
+    <title>고정지출 관리 앱</title>
     <link rel="stylesheet" href="style.css">
     
     <!-- Google Analytics -->
@@ -16,28 +16,44 @@
     </script>
 </head>
 <body>
-    <h1>냉장고 관리</h1>
+    <h1>고정지출 관리</h1>
     
-    <div class="input-section">
-        <h3>식재료 추가</h3>
-        <input type="text" id="food-name" placeholder="식재료 이름 (예: 우유)">
-        <input type="date" id="expiry-date">
-        <button id="add-btn">추가하기</button>
-    </div>
-    
-    <div class="stats-section">
-        <h3>📊 현황</h3>
-        <div id="stats-content">
-            <!-- 통계 정보가 여기에 표시됩니다 -->
+    <div class="main-container">
+        <div class="left-section">
+            <div class="input-section">
+                <h3>고정지출 추가</h3>
+                <input type="text" id="expense-name" placeholder="지출 이름 (예: 휴대폰 요금)">
+                <select id="category">
+                    <option value="">카테고리 선택</option>
+                    <option value="통신비">통신비</option>
+                    <option value="보험료">보험료</option>
+                    <option value="구독료">구독료</option>
+                    <option value="대출">대출</option>
+                    <option value="기타">기타</option>
+                </select>
+                <input type="number" id="amount" placeholder="월 금액 (원)">
+                <input type="number" id="payment-date" placeholder="결제일 (1~31)" min="1" max="31">
+                <button id="add-btn">추가하기</button>
+            </div>
+            
+            <div class="expense-list">
+                <h3>내 고정지출 목록</h3>
+                <div id="expense-items">
+                    <!-- 여기에 고정지출 목록이 나타납니다 -->
+                </div>
+            </div>
         </div>
-    </div>
-    
-    <div class="food-list">
-        <h3>내 식재료</h3>
-        <div id="food-items">
-            <!-- 여기에 식재료 목록이 나타납니다 -->
+        
+        <div class="right-section">
+            <div class="stats-section">
+                <h3>📊 월 고정지출 현황</h3>
+                <div id="stats-content">
+                    <!-- 통계 정보가 여기에 표시됩니다 -->
+                </div>
+            </div>
         </div>
     </div>
     
     <script src="script.js"></script>
 </body>
+</html>
